@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71F4A886DC2F67AD5C0459B7 /* Pods_SparkScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CB34984845E057C744A2FD /* Pods_SparkScan.framework */; };
 		8F24AEB52A9517B700FB03F0 /* SparkScanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F24AEB42A9517B700FB03F0 /* SparkScanApp.swift */; };
 		8F24AEB72A9517B700FB03F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F24AEB62A9517B700FB03F0 /* ContentView.swift */; };
 		8F24AEB92A9517B700FB03F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F24AEB82A9517B700FB03F0 /* Assets.xcassets */; };
@@ -19,6 +20,9 @@
 		8F24AEB62A9517B700FB03F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F24AEB82A9517B700FB03F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F24AEBB2A9517B700FB03F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF6AADEB1A44BED77FC9F163 /* Pods-SparkScan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkScan.debug.xcconfig"; path = "Target Support Files/Pods-SparkScan/Pods-SparkScan.debug.xcconfig"; sourceTree = "<group>"; };
+		E54C338730E33CBED88A16E8 /* Pods-SparkScan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkScan.release.xcconfig"; path = "Target Support Files/Pods-SparkScan/Pods-SparkScan.release.xcconfig"; sourceTree = "<group>"; };
+		F9CB34984845E057C744A2FD /* Pods_SparkScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +30,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F4A886DC2F67AD5C0459B7 /* Pods_SparkScan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03114B230F822B5D424A19E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF6AADEB1A44BED77FC9F163 /* Pods-SparkScan.debug.xcconfig */,
+				E54C338730E33CBED88A16E8 /* Pods-SparkScan.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8F24AEA82A9517B700FB03F0 = {
 			isa = PBXGroup;
 			children = (
 				8F24AEB32A9517B700FB03F0 /* SparkScan */,
 				8F24AEB22A9517B700FB03F0 /* Products */,
+				03114B230F822B5D424A19E4 /* Pods */,
+				9C58851AF88A5394F5C46179 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9C58851AF88A5394F5C46179 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9CB34984845E057C744A2FD /* Pods_SparkScan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F24AEBF2A9517B700FB03F0 /* Build configuration list for PBXNativeTarget "SparkScan" */;
 			buildPhases = (
+				8FA16ACAEB6CB3CAF8A998DE /* [CP] Check Pods Manifest.lock */,
 				8F24AEAD2A9517B700FB03F0 /* Sources */,
 				8F24AEAE2A9517B700FB03F0 /* Frameworks */,
 				8F24AEAF2A9517B700FB03F0 /* Resources */,
+				BA768F1D43DF6356E5C2260C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FA16ACAEB6CB3CAF8A998DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SparkScan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA768F1D43DF6356E5C2260C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparkScan/Pods-SparkScan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparkScan/Pods-SparkScan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SparkScan/Pods-SparkScan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F24AEAD2A9517B700FB03F0 /* Sources */ = {
@@ -261,6 +329,7 @@
 		};
 		8F24AEC02A9517B700FB03F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF6AADEB1A44BED77FC9F163 /* Pods-SparkScan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -270,6 +339,7 @@
 				DEVELOPMENT_TEAM = 4XTB3ZHPX2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = SparkScan;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -290,6 +360,7 @@
 		};
 		8F24AEC12A9517B700FB03F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E54C338730E33CBED88A16E8 /* Pods-SparkScan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,6 +370,7 @@
 				DEVELOPMENT_TEAM = 4XTB3ZHPX2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = SparkScan;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
